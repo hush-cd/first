@@ -31,19 +31,6 @@ def printGoodList(ils):
         count += 1
         print(tplt.format(count, g[0], g[1]))
 
-def main():
-    goods = '书包'
-    depth = 2
-    start_url = 'https://s.taobao.com/search?q=' + goods
-    infolist = []
-    for i in range(depth):
-        try:
-            url = start_url + '&s=' + str(44*i)
-            html = gethttp(url)
-            parserpage(infolist, html)
-        except:
-            print("error")
-    printGoodList(infolist)
-    #print(infolist)
+
 
 main()
